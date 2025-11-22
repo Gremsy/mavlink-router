@@ -610,7 +610,7 @@ int main(int argc, char *argv[])
     }
 
     Log::open(config.log_backend);
-    log_info(PACKAGE " version %s", BUILD_VERSION);
+    log_info(PACKAGE " version %s, build by Gremsy Software Team", BUILD_VERSION);
 
     // Build remaining config from config files and CLI parameters
     if (parse_conf_files(config) < 0) {

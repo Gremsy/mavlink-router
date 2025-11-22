@@ -37,7 +37,8 @@ int reset_uart(int fd)
     }
 
     /* Put UART in known state: it's the equivalent of "sane" in stty */
-    tc.c_cflag = CREAD;
+    // This line will affect to DTR and RTS pins
+    // tc.c_cflag = CREAD;
 
     tc.c_iflag |= BRKINT | ICRNL | IMAXBEL;
     tc.c_iflag &= ~(INLCR | IGNCR | IUTF8 | IXOFF | IUCLC | IXANY);
